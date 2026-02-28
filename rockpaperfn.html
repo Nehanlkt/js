@@ -10,7 +10,7 @@
 <body>
     <p>rock paper scissors</p>
     <button onclick="
-    pick();
+    console.log(pick());
     
 
     let result='';
@@ -37,7 +37,7 @@
                 result='loose';
         
             }
-             alert(`you picked rock.computer picked${comuterMove}.${result}`);">
+             alert(`you picked paper.computer picked${comuterMove}.${result}`);">
         paper
     </button>
     <button onclick="
@@ -52,7 +52,7 @@
                 result='win';
         
             }
-             alert(`you picked rock.computer picked${comuterMove}.${result}`);
+             alert(`you picked scissors.computer picked${comuterMove}.${result}`);
     ">scissors</button>
 
     <script>
@@ -70,6 +70,7 @@
             } else if (randomnum >= 2 / 3 && randomnum < 1) {
                 comuterMove = 'scissors';
             }
+            return 5;
 
         }
 
