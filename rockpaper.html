@@ -19,6 +19,17 @@
         comuterMove='scissors';
     }
     console.log(comuterMove);
+
+    let result='';
+    if(comuterMove==='rock'){
+        result='tie';
+    }else if(comuterMove==='paper'){
+        result='you lose';
+    }else if(comuterMove==='scissors'){
+        result='you win';
+    }
+
+    alert(`you picked rock.computer picked${comuterMove}.${result}`);
     ">rock</button>
     <button>paper</button>
     <button>scissors</button>
