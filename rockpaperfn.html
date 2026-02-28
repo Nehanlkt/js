@@ -31,17 +31,34 @@
             if(comuterMove=='paper'){
                 result='tie';
             }else if(comuterMove=='rock'){
-                console.log('win');
+                result= 'win';
             }
             else{
-                console.log(tie);
-            }">paper</button>
-    <button>scissors</button>
+                result='loose';
+        
+            }
+             alert(`you picked rock.computer picked${comuterMove}.${result}`);">
+        paper
+    </button>
+    <button onclick="
+    pick();
+    result=' ';
+            if(comuterMove=='scissors'){
+                result='tie';
+            }else if(comuterMove=='rock'){
+                result= 'loose';
+            }
+            else{
+                result='win';
+        
+            }
+             alert(`you picked rock.computer picked${comuterMove}.${result}`);
+    ">scissors</button>
 
     <script>
+        let comuterMove = ' ';//global
 
         function pick() {
-            let comuterMove = ' '; //global variable
             const randomnum = Math.random()
             // let comuterMove = ' ';
             // variable is here,local so u cant get op
@@ -53,7 +70,7 @@
             } else if (randomnum >= 2 / 3 && randomnum < 1) {
                 comuterMove = 'scissors';
             }
-        
+
         }
 
 
