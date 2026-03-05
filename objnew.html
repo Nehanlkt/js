@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>objects</title>
+</head>
+<body>
+    <script>
+        const product={
+            name:"socks",
+            price:1090
+        };
+        console.log(typeof product);
+        console.log(product.name);
+        console.log(product.price);
+
+
+        // changing value
+        product.name="cotton";
+         console.log(product);
+        //  addn of new property
+        product.brand=true;
+        console.log(product);
+        // dlt property
+        delete product.brand;
+        console.log(product);
+
+
+// or accesing like this method2
+        const product2={
+            name:'shirt',
+            'delivered-time':'10pm',
+            // nested objects
+            rating:{
+                stars:4.5,
+                count:87
+
+            },
+            // function
+            fun: function fn1(){
+                console.log('fn inside obj');
+            }
+        };
+        console.log(product2['name']);
+        console.log(product2['delivered-time']); //undefined 
+        // console.log(product2.delivery-time);//gives error
+        console.log(product2.rating);
+        product2.fun();
+
+
+        // java obj to json
+        console.log(JSON.stringify(product2));
+        // typeof this is string
+
+
+
+
+        // json to java obj
+        const jsonstring=JSON.stringify(product2);
+        console.log(JSON.parse(jsonstring));
+
+        // localStorage
+        // localstorage only supports strings
+        // setitem(name,)
+        // gets the item out of local storage
+        
+
+        localStorage.setItem('message','hello');
+
+
+    </script>
+    
+</body>
+</html>
+<!-- object is property value pair -->
+ <!-- console is obj
+  console.log is fn
+  log is fn inside console obj
+  these r builtin objects
+  1.JSON
+  no single quotes n fns are not supported
+ 2.localstorage
+  variables r temp means when reftesh its gone
+  to goout from this-->
+
+  <!-- json used when we send data between computers
+   when we stire data
+   jsobj to json coversion -->
+
+
+   <!-- json to javaobj
+    json.parse() -->
