@@ -69,6 +69,34 @@
         localStorage.setItem('message','hello');
 
 
+        // objects are refrences
+        const object1={
+            message:'hello'
+        };
+        const obj2=object1;
+        //😒 copy by refrence
+
+        object.message='good';
+        console.log(object1);
+        // in obj even if const we can change
+        console.log(obj2);
+        // directly changes to good no need to change again
+        
+        // we cant compare objects diectly
+        const obj3={
+            message:'hello'
+        };
+        console.log(object1==obj3);
+        // even though same it gives false bcz it compares reftrences not the values
+        console.log(obj2==object1);
+        // true same refrence therefore
+        
+
+
+
+
+
+
     </script>
     
 </body>
@@ -96,3 +124,5 @@
      this dosent works for null and undefined
      null.property
      undefined.method( ) -->
+
+
