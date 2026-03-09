@@ -4,16 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To do list</title>
+    <link rel="stylesheet" href="todo.css">
+
 </head>
 <body>
     <p>todo list</p>
+    <div class="todoipgrid">
     <input placeholder="todo name"
-    class="jsip">
+    class="jsip nameip">
+    <input type="date" class="datejs dateip">
     <button onclick="
     addtodo()
-    ">add</button>
+    " class="addbtn">add</button>
+    </div>
 
-    <div class="jslist"></div>
+    <div class="jslist todogrid"></div>
 
 
 <script src="todo.js"></script>
