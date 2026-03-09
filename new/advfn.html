@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function greeting(){
+            console.log('hello');
+        }
+        greeting();
+        // functions are values
+        // 1.ananymous fn(fn vtout name)
+        const a=function (){
+            console.log('k');
+        };
+        console.log(a);
+        // or
+        a();
+
+        const obj1={
+            num:2,
+            fun:function (){
+                console.log('ll');
+            }
+        };
+        obj1.fun();
+
+
+        // settimeout-builtin fn-fn to run in future
+        setTimeout(function(){
+            console.log('timeout');
+        },3000);
+        // in milliseconds
+
+        // asynchronous code-wont wait for line to finish before going to next line
+        console.log('next line');
+
+
+
+
+        // setinterval-keep running tht fn every 3 sec to stop this use Id clearinterval()
+        setInterval(function(){
+            console.log('interval');
+        },3000);
+        // asynchronous code
+        console.log('next line2');
+
+
+
+        [
+            'dinner',
+            'snaks',
+            'dance'
+        ].forEach(function(value,index){
+            console.log(index);
+            console.log(value);
+
+        });
+
+
+
+    </script>
+</body>
+</html>
