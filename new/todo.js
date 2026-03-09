@@ -1,14 +1,30 @@
-const todolist = ['dinner', 'wash clothes'];
+const todolist = [{
+    name:'dinner',
+    duedate:'2026-4-22'
+ },{
+ name: 'wash clothes',
+duedate:'2026-4-24'}];
 updatelist();
 function updatelist() {
     let todohtml = '';
     for (let i = 0; i < todolist.length; i++) {
-        const todo = todolist[i];
-        const html = `<p>${todo}</p>`
+        const todoobj = todolist[i];
+        const name=todoobj.name;
+        const duedate=todoobj.duedate;
+        const html = `
+        <div>${name}</div>
+        <div> ${duedate}</div>
+        <button onclick="
+        todolist.splice(${i},1);
+        updatelist();
+        " class="dltbtn">
+        delete
+        </button> 
+        `;
         todohtml += html;
 
     }
-    console.log(todohtml);
+    // console.log(todohtml);
 
     document.querySelector('.jslist').innerHTML = todohtml;
 }
@@ -16,8 +32,12 @@ function updatelist() {
 function addtodo() {
     const ipelem = document.querySelector('.jsip');
     const name = ipelem.value;
-    todolist.push(name);
-    console.log(todolist);
+    const dateip=document.querySelector('.datejs');
+    const duedate=dateip.value;
+    todolist.push({
+        name:name,
+    duedate:duedate});
+    // console.log(todolist);
     ipelem.value = " ";
     updatelist();
 
