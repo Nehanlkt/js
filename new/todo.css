@@ -1,0 +1,42 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.todogrid,.todoipgrid{
+    display: grid;
+
+    grid-template-columns: 200px 150px 100px;
+    column-gap: 10px;
+    row-gap: 10px;
+    /* grid-template-rows: 30px 30px; */
+    align-items: center;
+
+
+}
+
+.todoipgrid{
+    margin-bottom: 10px;
+    align-items: stretch;
+}
+
+.nameip,.dateip{
+    font-size: 15px;
+    padding: 6px;
+}
+
+.addbtn{
+    background-color: green;
+    color: beige;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.dltbtn{
+    background-color: red;
+    color: aliceblue;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
