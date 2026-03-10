@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .subscribe-button{
+            background-color: black;
+            border-radius: 25px;
+            font-weight: 100;
+            color: aliceblue;
+            cursor: pointer;
+
+        }
+        .is-subscribe{
+            background-color: rgb(182, 177, 177);
+            color: black;
+        }
+        body{
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .cost-ip{
+            font-size: 15px;
+            /* padding: px 10px; */
+        }
+        .calci{
+            background-color: green;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <p>youtube channel</p>
+    <button onclick="
+    const buttonelement=document.querySelector('.js-btn');
+    if(buttonelement.innerText==='subscribe'){
+        // if we use innerhtml and in button if we gave spaces than it wont changes bcz it coniders spaces too therefore inntertext is used
+        buttonelement.innerText='subscribed';
+        buttonelement.classList.add('is-subscribe');
+    }
+    else{
+        buttonelement.innerText='subscribe';
+        buttonelement.classList.remove('is-subscribe');
+    }" class="js-btn subscribe-button">subscribe</button>
+
+    <p>amazon shipping calculator</p>
+    <input placeholder="cost of order"
+    class="jscost cost-ip" onkeydown="handlecost(event)">
+    <button onclick="Calculatetotal()" class="jscost calci">calculate</button>
+    <p class="total"></p>
+
+<script>
+    String(25)
+    console.log('25'-5);
+    // if string has only number and we -*/ it vl be coverteed into number
+    // but if + not works
+    window.document
+    window.console.log('window');
+
+
+
+
+    function handlecost(event){
+        if(event.key==='Enter'){
+            Calculatetotal();
+        }
+    }
+    function Calculatetotal(){
+        const inputelem=document.querySelector('.jscost');
+        // instead of innerhtml for input value is used
+        let cost=Number(inputelem.value);
+        if(cost<40){
+            cost=cost+10;
+            // when ever we get value from dom the value will be string!! thereforeif i give 25 it peints as2510 not 35!!
+// so use num in input
+        }
+        document.querySelector('.total').innerHTML=`$${cost}`;
+
+    }
+</script>
+
+
+</body>
+</html>
+
+<!-- clicks,keydowns are events
+ onclik,onkeydown are event listeners -->
+
+
+ <!-- .classlist - gives us control of class attribute
+  when we click the button,
+  add a clss
+  this class will have different styles -->
