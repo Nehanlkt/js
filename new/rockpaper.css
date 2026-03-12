@@ -34,7 +34,7 @@ body {
 }
 
 .reset-score-button {
-  background-color: white;
+  background-color: rgb(154, 150, 150);
   border: none;
   font-size: 15px;
   padding: 8px 15px;
